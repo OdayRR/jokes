@@ -7,95 +7,118 @@ and open the template in the editor.
       
         <?php
         
-        $box= array(1,2,3,4,5,6,7,8,9,10,11,12,13);
+        //$box= array(1,2,3,4,5,6,7,8,9,10,11,12,13);
         
               
-        $x= $_GET['n'];
-        
-        echo "Kiez een nummer tussen 1 en 13";
+       echo "Kiez een nummer tussen 1 en 13";
         echo "</br>";
-        switch ($x){
+
+        
+        $somenumber= $_GET['n'];
+        //$somenumber=4;
+        $w= $_GET['m'];
+
+        loopThroughAll($w); 
+        
+        
+        function loopThroughAll($getM){
+            for($q = 0; $q < 13; $q++){
+                if (strstr (number($q),$getM)) {
+                    echo $q ." "." ". number($q);
+                    echo"<br>";
+                    echo"<br>";
+             
+                }
+            }
+        }            
+
+            
+          
+            
+       
+       
+        echo substr(number($somenumber),0)."<br>";
+        
+        number($somenumber);
+        
+       function number($somenumber){
+          
+          
+
+
+           switch ($somenumber){
             
             
         case 1 :
                 
-                echo "Ik ben maar weer opgestaan, want dat slapend rijk worden is vannacht weer niet gelukt";
-            break;
+              return "Ik ben maar weer opgestaan, want dat slapend rijk worden is vannacht weer niet gelukt";
+            
         
         case 2 :
                 
-                echo " Rijkdom bestaat niet uit het hebben van veel bezittingen, maar in het hebben van weinig behoeften.";
-            break;
+               return  " Rijkdom bestaat niet uit het hebben van veel bezittingen, maar in het hebben van weinig behoeften.";
+            
         
         case 3 :
                 
-                echo "We moeten waar mogelijk bezunigen, koste wat het kost";
-            break;
+            return "We moeten waar mogelijk bezunigen, koste wat het kost";
+            
         
         case 4 :
                 
-                echo "Ik wil best leren met geld om te gaan, alleen wil niemand mij dat geven";
-            break;
+              return   "Ik wil best leren met geld om te gaan, alleen wil niemand mij dat geven";
+            
         
         case 5 :
                 
-                echo "Mijn portemonnee is net een ui, als ik hem open moet ik huilen";
-            break;
+                return "Mijn portemonnee is net een ui, als ik hem open moet ik huilen";
+            
         
         case 6 :
                 
-                echo "Ik spaar geen geld, ik spaar mooie momenten";
-            break;
+               return "Ik spaar geen geld, ik spaar mooie momenten";
+            
              
         case 7 :
                 
-                echo "Om Windows af te sluiten hoef je niet de gordijnen dicht te doen";
-            break;    
+                return "Om Windows af te sluiten hoef je niet de gordijnen dicht te doen";
+              
             
             
         case 8 :
                 
-                echo "Je hebt je iPad ingeruild voor een iets grotere, hopelijk doet je vriendin niet hetzelfde";
-            break;   
+                return "Je hebt je iPad ingeruild voor een iets grotere, hopelijk doet je vriendin niet hetzelfde";
+           
             
         case 9 :
                 
-                echo "Zij wilde de wereld zien, hij installeerde Google Earth";
-            break;   
+                return "Zij wilde de wereld zien, hij installeerde Google Earth";
+              
    
         case 10 :
                 
-                echo "Tenzij je naam Google is, hou op met te doen alsof je alles weet";
-            break;
+                return "Tenzij je naam Google is, hou op met te doen alsof je alles weet";
+            
             
         case 11 :
                 
-                echo "Facebook is als gearresteerd worden: alles wat je zegt kan en zal tegen je gebruikt worden...";
-            break;   
+                return "Facebook is als gearresteerd worden: alles wat je zegt kan en zal tegen je gebruikt worden...";
+              
             
         case 12 :
                 
-                echo "Glasvezel door het riool: daar zit een luchtje aan";
-            break;   
+                return "Glasvezel door het riool: daar zit een luchtje aan";
+              
             
             
         case 13 :
                 
-                echo "Op de digitale snelweg kun je ook verongelukken";
-            break;
+                return "Op de digitale snelweg kun je ook verongelukken";
+            
             
             
         }
         
-        $text="Glasvezel door het riool: daar zit een luchtje aan";
-        
-        //$e= $_GET['word'];        
-        search();
-     
-        function search(){
-           
-            echo strrchr($text,"door");
-            
-        }
+     }
         
         ?>
